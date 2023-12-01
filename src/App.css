@@ -24,3 +24,17 @@ nav.navbar .container-fluid .navbar-brand {
 nav.navbar .container-fluid .navbar-brand a {
   margin-left: 15px;
 }
+
+/* Banner */
+
+.banner {
+  height: 90vh;
+  width: 100%;
+  background-image: url(./img/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner #bgimg {
+  height: inherit;
+  width: inherit;
+}
