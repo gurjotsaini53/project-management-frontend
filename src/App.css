@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* navbar  */
+
+nav.navbar {
+  position: sticky;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+nav.navbar #title {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
+
+nav.navbar .container-fluid .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+nav.navbar .container-fluid .navbar-brand a {
+  margin-left: 15px;
+}
