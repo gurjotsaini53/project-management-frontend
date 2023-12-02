@@ -3,7 +3,7 @@ import logo from "../img/logo.svg";
 export default function Navbar() {
   return (
     <>
-      <nav className="navbar bg-body-tertiary">
+      <nav className="navbar bg-body-tertiary fixed-top">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             <img
