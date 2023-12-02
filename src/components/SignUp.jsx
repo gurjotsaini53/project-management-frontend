@@ -29,7 +29,7 @@ export default function SignUp() {
           <input
             type="text"
             value={newUsername}
-            placeholder="example@email.com"
+            placeholder="enter unique username"
             onChange={(e) => setNewUsername(e.target.value)}
             required
           />

@@ -58,8 +58,10 @@ nav.navbar .container-fluid .navbar-brand a {
 }
 .banner .banner-right {
   display: inline-block;
-  padding: 100px;
+  padding: 80px;
   width: 50%;
+  margin-left: auto;
+  margin-right: auto;
   background-color: red;
   background: transparent;
 }

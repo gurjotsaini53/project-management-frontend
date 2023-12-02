@@ -27,7 +27,7 @@ export default function SignIn() {
           <input
             type="text"
             value={username}
-            placeholder="example@email.com"
+            placeholder="enter your username"
             onChange={(e) => setUsername(e.target.value)}
             required
           />
@@ -35,7 +35,7 @@ export default function SignIn() {
           <input
             type="password"
             value={password}
-            placeholder="12345678"
+            placeholder="enter your password"
             onChange={(e) => setPassword(e.target.value)}
             required
             id="password"
