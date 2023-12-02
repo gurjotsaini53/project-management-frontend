@@ -33,8 +33,84 @@ nav.navbar .container-fluid .navbar-brand a {
   background-image: url(./img/banner.png);
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
 }
-.banner #bgimg {
-  height: inherit;
-  width: inherit;
+
+.banner .banner-left {
+  display: inline-block;
+  width: 50%;
+  background: transparent;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 50px;
+}
+
+.banner .banner-left #banner-left-img {
+  height: 250px;
+  width: 500px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.banner .banner-left h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+.banner .banner-right {
+  display: inline-block;
+  padding: 100px;
+  width: 50%;
+  background-color: red;
+  background: transparent;
+}
+
+.banner .banner-right .signInFormCantainer {
+  background-color: white;
+  height: 400px;
+  width: 350px;
+  border-radius: 5px;
+  box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.3);
+
+  padding: 10px;
+}
+.banner .banner-right .signInFormCantainer h3 {
+  text-align: center;
+}
+.banner .banner-right .signInFormCantainer .signInForm {
+  margin: 25px;
+}
+.banner .banner-right .signInFormCantainer label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.banner .banner-right .signInFormCantainer input {
+  width: 100%;
+  padding: 2px;
+}
+
+.banner .banner-right .signInFormCantainer input#password {
+  margin-bottom: 20px;
+}
+
+.banner .banner-right .signInFormCantainer p {
+  font-size: 11px;
+}
+
+.banner .banner-right .signInFormCantainer .btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .banner-right .signInFormCantainer .newAccountContainer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.banner .banner-right .signInFormCantainer .newAccountContainer a {
+  text-decoration: none;
+  font-size: 13px;
 }
