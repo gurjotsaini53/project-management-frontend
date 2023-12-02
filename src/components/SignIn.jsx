@@ -7,7 +7,7 @@ export default function SignIn() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("https://api.example.com/verify", {
+      const response = await axios.post("", {
         username,
         password,
       });

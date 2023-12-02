@@ -1,5 +1,6 @@
 import softImg from "../img/softImg.png";
 import SignIn from "./SignIn";
+import SignUp from "./SignUp";
 export default function Banner() {
   return (
     <>
@@ -17,7 +18,8 @@ export default function Banner() {
           <h4>INCLUDED IN YOUR FREE PLAN: Forever free for up to 10 users</h4>
         </div>
         <div className="banner-right">
-          <SignIn />
+          {/* <SignIn /> */}
+          <SignUp />
         </div>
       </div>
     </>
