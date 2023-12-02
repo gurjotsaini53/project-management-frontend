@@ -1,15 +1,16 @@
 import { useState } from "react";
-
+import axios from "axios";
 export default function SignIn() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  let payload = { username: username, password: password };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       const response = await axios.post("", {
-        username,
-        password,
+        payload,
       });
       console.log(response.data);
       // Handle success here (e.g., redirecting the user)

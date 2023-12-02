@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import axios from "axios";
 export default function SignUp() {
   const [newUsername, setNewUsername] = useState("");
   const [newPassword, setNewPassword] = useState("");
@@ -9,10 +9,7 @@ export default function SignUp() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("", {
-        username,
-        password,
-      });
+      const response = await axios.post("", {});
       console.log(response.data);
       // Handle success here (e.g., redirecting the user)
     } catch (error) {
