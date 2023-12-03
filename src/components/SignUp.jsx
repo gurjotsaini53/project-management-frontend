@@ -1,15 +1,20 @@
 import { useState } from "react";
 import axios from "axios";
 export default function SignUp() {
-  const [newUsername, setNewUsername] = useState("");
-  const [newPassword, setNewPassword] = useState("");
-  const [newConfirmPassword, setConfirmPassword] = useState("");
-  const [newEmail, setNewEmail] = useState("");
+  const [username, setNewUsername] = useState("");
+  const [password, setNewPassword] = useState("");
+  const [name, setName] = useState("");
+  const [email, setNewEmail] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("", {});
+      const response = await axios.post("http://localhost:8000/signup", {
+        name,
+        email,
+        username,
+        password,
+      });
       console.log(response.data);
       // Handle success here (e.g., redirecting the user)
     } catch (error) {
@@ -22,10 +27,19 @@ export default function SignUp() {
       <div className="signUpFormCantainer">
         <h3>Register Yourself</h3>
         <form onSubmit={handleSubmit} className="signInForm">
+          <label>Name : </label>
+          <input
+            type="text"
+            value={name}
+            placeholder="John Doe"
+            onChange={(e) => setName(e.target.value)}
+            required
+            id="password"
+          />
           <label>Enter Your Username:</label>
           <input
             type="text"
-            value={newUsername}
+            value={username}
             placeholder="enter unique username"
             onChange={(e) => setNewUsername(e.target.value)}
             required
@@ -33,7 +47,7 @@ export default function SignUp() {
           <label>Enter Your Email:</label>
           <input
             type="text"
-            value={newEmail}
+            value={email}
             placeholder="example@email.com"
             onChange={(e) => setNewEmail(e.target.value)}
             required
@@ -41,20 +55,11 @@ export default function SignUp() {
           <label>Enter Password:</label>
           <input
             type="password"
-            value={newPassword}
+            value={password}
             placeholder="12345678"
             onChange={(e) => setNewPassword(e.target.value)}
             required
             id="password1"
-          />
-          <label>Confirm Password:</label>
-          <input
-            type="password"
-            value={newConfirmPassword}
-            placeholder="12345678"
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-            id="password"
           />
 
           <p>

@@ -9,9 +9,10 @@ export default function SignIn() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("", {
-        payload,
-      });
+      const response = await axios.post(
+        "http://localhost:8000/signin",
+        payload
+      );
       console.log(response.data);
       // Handle success here (e.g., redirecting the user)
     } catch (error) {
