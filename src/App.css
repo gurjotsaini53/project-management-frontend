@@ -195,3 +195,20 @@ nav.navbar .container-fluid .navbar-brand a {
   text-decoration: none;
   font-size: 13px;
 }
+
+/* dashboard */
+
+.dashboard-container {
+  display: flex;
+  width: 100%;
+  padding-top: 70px;
+}
+
+/* aside */
+
+.aside-container {
+  width: 20%;
+  background-color: black;
+
+  height: 90vh;
+}

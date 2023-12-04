@@ -6,7 +6,10 @@ export default function Banner() {
     <>
       <div className="banner">
         <div className="banner-left">
-          <h1>#1 Project Management software tool used by agile teams</h1>
+          <h1>
+            #1 Project Management software tool used by software development
+            teams
+          </h1>
 
           <h4>
             Trusted by 100K+ teams that plan, track, release, and manage

@@ -5,7 +5,7 @@ export default function Navbar() {
     <>
       <nav className="navbar bg-body-tertiary fixed-top">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <div className="navbar-brand" href="#">
             <img
               src={logo}
               alt="Logo"
@@ -13,11 +13,11 @@ export default function Navbar() {
               height="40"
               className="d-inline-block align-text-top"
             />
-            <a href="nav-link active" id="title">
+            <a href="" id="title">
               {" "}
               Project Management System
             </a>
-          </a>
+          </div>
         </div>
       </nav>
     </>

@@ -1,17 +1,19 @@
 import { useState } from "react";
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Banner from "./components/Banner";
-import Banner2 from "./components/Banner2";
-import Banner3 from "./components/Banner3";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
     <>
-      <Navbar></Navbar>
-      <Banner />
-      <Banner2 />
-      {/* <Banner3 /> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/dashboard" element={<Dashboard />}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
