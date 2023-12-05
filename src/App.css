@@ -208,7 +208,18 @@ nav.navbar .container-fluid .navbar-brand a {
 
 .aside-container {
   width: 20%;
+  margin: 2px;
   background-color: black;
 
   height: 90vh;
+}
+
+/* main container */
+
+.main-container {
+  display: flex;
+  width: 80%;
+  height: 90vh;
+  background-color: red;
+  margin: 2px;
 }
