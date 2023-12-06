@@ -1,6 +1,6 @@
 import logo from "../img/logo.svg";
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <>
       <nav className="navbar bg-body-tertiary fixed-top">
@@ -17,6 +17,8 @@ export default function Navbar() {
               {" "}
               Project Management System
             </a>
+
+            <p className="navbar-username"> {props.username}</p>
           </div>
         </div>
       </nav>

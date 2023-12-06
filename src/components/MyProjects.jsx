@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import Aside from "./Aside";
 import Main from "./Main";
 import axios from "axios";
-export default function Dashboard() {
+export default function MyProjects() {
   let username;
   username = localStorage.getItem("uname");
   useEffect(() => {
@@ -12,7 +12,7 @@ export default function Dashboard() {
   }, []);
 
   async function getData() {
-    let data = await axios.get("http://localhost:8000/dashboard");
+    let data = await axios.get("http://localhost:8000/dashboard/myprojects");
     return data;
   }
 
@@ -23,7 +23,7 @@ export default function Dashboard() {
       <div className="dashboard-container">
         <Aside />
         <Main />
-      
+        myprojects
       </div>
     </>
   );

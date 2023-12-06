@@ -1,19 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 export default function SignIn() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   let payload = { username: username, password: password };
 
+  const Navigate = useNavigate();
+
+  function NavigateToDashboard() {
+    Navigate("/dashboard");
+  }
   const handleSubmit = async (event) => {
+    localStorage.removeItem("uname");
+    localStorage.setItem("uname", "Gurjot Singh");
     event.preventDefault();
     try {
-      const response = await axios.post(
-        "http://localhost:8000/signin",
-        payload
-      );
+      const response = await axios.post("http://localhost:8000/signin", {
+        username,
+        password,
+      });
       console.log(response.data);
+
+      if (response.status == 200) NavigateToDashboard();
       // Handle success here (e.g., redirecting the user)
     } catch (error) {
       console.error("Error:", error);

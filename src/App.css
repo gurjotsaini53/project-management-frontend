@@ -25,6 +25,13 @@ nav.navbar .container-fluid .navbar-brand a {
   margin-left: 15px;
 }
 
+.navbar-username {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* Banner */
 
 .banner {
@@ -209,17 +216,69 @@ nav.navbar .container-fluid .navbar-brand a {
 .aside-container {
   width: 20%;
   margin: 2px;
-  background-color: black;
-
-  height: 90vh;
+  background-color: #5fbdff;
+  background-color: #b6bbc4;
+  display: flex;
+  flex-direction: column;
+  height: 89vh;
+  padding: 10px;
 }
-
+.aside-signOutBtn {
+  background-color: black;
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+.aside-signOutBtn:hover {
+  background-color: rgb(190, 114, 114);
+  color: white;
+}
+.aside-FeedBtn {
+  background-color: black;
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+.aside-FeedBtn:hover {
+  background-color: grey;
+  color: white;
+}
 /* main container */
 
 .main-container {
+  background-color: #fffbf5;
   display: flex;
   width: 80%;
-  height: 90vh;
-  background-color: red;
+  height: 89vh;
   margin: 2px;
 }
+
+.addbtn {
+  display: flex;
+  background-color: #5fbdff;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  color: white;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+/*  */
