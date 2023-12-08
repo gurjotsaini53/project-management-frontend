@@ -10,20 +10,31 @@ export default function SignIn() {
   const Navigate = useNavigate();
 
   function NavigateToDashboard() {
-    Navigate("/dashboard");
+    Navigate("/dashboard/discover");
+  }
+
+  function register() {
+    Navigate("/signup");
   }
   const handleSubmit = async (event) => {
     localStorage.removeItem("uname");
-    localStorage.setItem("uname", "Gurjot Singh");
     event.preventDefault();
     try {
       const response = await axios.post("http://localhost:8000/signin", {
         username,
         password,
       });
-      console.log(response.data);
+      console.log(response);
+
+      localStorage.setItem("uname", response.data.username);
+      localStorage.setItem("name", response.data.name);
 
       if (response.status == 200) NavigateToDashboard();
+      else if (response.status == 202) {
+        window.alert("Please enter correct username");
+      } else if (response.status == 204) {
+        window.alert("Wrong Password");
+      }
       // Handle success here (e.g., redirecting the user)
     } catch (error) {
       console.error("Error:", error);
@@ -63,7 +74,7 @@ export default function SignIn() {
             </button>
           </div>
 
-          <div className="newAccountContainer">
+          <div className="newAccountContainer" onClick={register}>
             <a href="">Create new account</a>
 
             <a href="">forgot password ? </a>

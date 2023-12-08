@@ -5,6 +5,7 @@ export default function SignOutBtn() {
 
   function NavigateToHome() {
     localStorage.removeItem("uname");
+    localStorage.removeItem("name");
     Navigate("/");
   }
   return (

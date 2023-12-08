@@ -5,7 +5,7 @@ import Main from "./Main";
 import axios from "axios";
 export default function Dashboard() {
   let username;
-  username = localStorage.getItem("uname");
+  username = localStorage.getItem("name");
   useEffect(() => {
     // let data = getData();
     // console.log(data);
@@ -23,7 +23,6 @@ export default function Dashboard() {
       <div className="dashboard-container">
         <Aside />
         <Main />
-      
       </div>
     </>
   );

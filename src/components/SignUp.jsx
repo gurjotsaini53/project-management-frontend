@@ -1,11 +1,16 @@
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 export default function SignUp() {
   const [username, setNewUsername] = useState("");
   const [password, setNewPassword] = useState("");
   const [name, setName] = useState("");
   const [email, setNewEmail] = useState("");
-
+  const Navigate = useNavigate();
+  function signin() {
+    Navigate("/");
+  }
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -15,6 +20,14 @@ export default function SignUp() {
         username,
         password,
       });
+      if (response.status == 201) {
+        window.alert("Registration Successfull");
+        signin();
+      } else {
+        window.alert(
+          "Registration Failed , Please enter valid username, email and password"
+        );
+      }
       console.log(response.data);
       // Handle success here (e.g., redirecting the user)
     } catch (error) {
@@ -73,7 +86,9 @@ export default function SignUp() {
           </div>
 
           <div className="newAccountContainer">
-            <a href="">Sign In</a>
+            <a href="" onClick={signin}>
+              Sign In
+            </a>
           </div>
         </form>
       </div>

@@ -8,7 +8,8 @@ export default function myProjectsBtn() {
   }
   return (
     <>
-      <div className="aside-FeedBtn" onClick={NavigateToMyProjects}>
+      <div className="aside-FeedBtn" onClick={NavigateToMyProjects}
+      >
         My Projects
       </div>
     </>
